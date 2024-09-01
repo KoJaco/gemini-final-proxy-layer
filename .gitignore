@@ -1,0 +1,9 @@
+
+# keys
+companion-434100-c565c1d2ca1f.json
+
+# envs
+.env.local
+.env
+
+/deployments/*

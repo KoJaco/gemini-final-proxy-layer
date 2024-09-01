@@ -60,15 +60,15 @@ Companion API Proxy Service is a GoLang-based API layer designed to securely rou
 
 ## Project Overview
 
-The Companion API Proxy Service is designed to securely manage API requests and serve as an intermediary between the Companion Chrome extension and external APIs such as Google Gemini and OpenAI. The service ensures that requests are authenticated, rate-limited, and securely processed while providing a caching layer for optimal performance.
+The Companion API Proxy Service is designed to securely manage API requests to external services, serving as an intermediary between the Companion Chrome extension and Google Gemini and OpenAI. The service ensures that requests are authenticated, rate-limited, and securely processed while providing a caching layer for optimal performance.
 
 ## Key Features
 
--   Authentication and Authorization: Integrates with Clerk for user authentication and generates short-lived access tokens for secure API interactions.
+-   Authentication and Authorization: Integrates with Firebase and Firestore to authenticate users. Initially the architecture is single tenant, however, it will later be shifted to multi-tenant with support for organizations.
 -   Rate Limiting: Implements rate limiting on a per-user basis to prevent abuse and manage resource usage efficiently.
 -   Caching Layer: Enhances performance by caching frequently requested data.
     Error Handling and Retry: Provides solid error handling with retry mechanisms for robust operations.
--   Stripe Integration: Manages payments using Stripe, allowing users to sign up for paid plans and access premium features.
+-   Stripe Integration: Manages payments using Stripe, allowing users to sign up for a paid plan and access premium features or go with an initial free trial period.
 -   Monitoring and Observability: Integrates with monitoring tools for real-time API observability (APM/metrics).
 -   Swagger Documentation: Uses Swagger for API documentation, allowing easy exploration of endpoints.
 
